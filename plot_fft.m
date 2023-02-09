@@ -1,0 +1,12 @@
+len=50;
+n=(0:1:len);
+fc=100;
+Ts=0.004;
+fsmin=200;
+x=cos(2*pi*fc*Ts*n);
+subplot(3,1,1);
+plot(abs(fft(x,len-10)));
+subplot(3,1,2);
+plot(abs(fft(x,len)));
+subplot(3,1,3);
+plot(abs(fft(x,len+10)));
